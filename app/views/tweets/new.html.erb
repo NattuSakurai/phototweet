@@ -1,7 +1,9 @@
 <div class="contents row">
   <div class="container">
+  <%= form_with(model: @tweet, local: true)do |form|%>
     <h3>投稿する</h3>
-    <%= render partial: "layout/error_messages", model: form.object%>
+    <%= render "layouts/error_messages", model: form.object %>
     <%= render partial: "form", locals: { tweet: @tweet } %>
+  <% end %>
   </div>
 </div>
