@@ -1,7 +1,7 @@
 class Tweet < ApplicationRecord
   with_options presence: true do
-    validates :text
     validates :image
+    validates :text
   end
 
   belongs_to :user
